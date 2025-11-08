@@ -1,0 +1,19 @@
+{
+  "name": "react-hello-world",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Minimal React + Vite Hello World with Tailwind (ready for Vercel).",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview --port 4173"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "vite": "^5.4.8",
+    "tailwindcss": "^3.4.13"
+  }
+}
