@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import './index.css'
 import { useTheme } from './hooks/useTheme'
+import Header from './components/Header'
 
 function App() {
   const { theme, toggleTheme } = useTheme('dark', true)
@@ -19,45 +20,8 @@ function App() {
 
   return (
     <div className="min-h-screen flex flex-col bg-white text-gray-900 dark:bg-gray-900 dark:text-white transition-colors duration-300">
-      {/* Header */}
-      <header className="sticky top-0 z-10 border-b border-gray-200 dark:border-gray-800 bg-white/70 dark:bg-gray-900/70 backdrop-blur">
-        <div className="mx-auto max-w-4xl px-4 py-3 flex items-center justify-between">
-          <h1 className="text-lg font-semibold tracking-tight">
-            React + Vite + Tailwind • Hello World
-          </h1>
-
-          <div className="flex items-center gap-2">
-            {/* Deploy status placeholder (swap for a real badge later) */}
-            <a
-              href="https://react-hello-world-drab.vercel.app"
-              target="_blank"
-              rel="noreferrer"
-              title="View live deployment"
-            >
-              <img
-                src="https://deploy-badge.vercel.app/?url=https://react-hello-world-drab.vercel.app&name=Hello%20World&style=flat"
-                alt="Deployment Status"
-                className="h-5"
-              />
-            </a>
-
-
-            <button
-              onClick={toggleTheme}
-              className="px-3 py-1.5 rounded-lg border border-gray-300 dark:border-gray-600
-                         bg-gray-100 hover:bg-gray-200
-                         dark:bg-gray-700 dark:hover:bg-gray-600
-                         text-gray-900 dark:text-white
-                         focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
-                         transition-colors"
-              aria-label="Toggle light/dark mode (D)"
-              title='Toggle light/dark mode (shortcut: "D")'
-            >
-              {theme === 'dark' ? 'Light' : 'Dark'}
-            </button>
-          </div>
-        </div>
-      </header>
+      {/* Header moved to its own component */}
+      <Header theme={theme} onToggleTheme={toggleTheme} />
 
       {/* Main */}
       <main className="flex-1 flex items-center justify-center px-4">
@@ -81,7 +45,7 @@ function App() {
         </div>
       </main>
 
-      {/* Footer */}
+      {/* Footer (we'll extract this next) */}
       <footer className="border-t border-gray-200 dark:border-gray-800">
         <div className="mx-auto max-w-4xl px-4 py-4 text-sm flex flex-col sm:flex-row items-center justify-between gap-2">
           <p className="text-gray-600 dark:text-gray-400">
