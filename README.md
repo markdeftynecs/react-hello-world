@@ -189,6 +189,107 @@ These are not shipped to production. They’re used during local development or 
 
 ---
 
+## 🏷️ Versioning and Releases
+
+This project follows **Semantic Versioning (SemVer)** using npm’s built-in version management commands.
+
+### 📦 Available Release Scripts
+
+| Script | Command Run | Description |
+|---------|--------------|-------------|
+| `npm run release:patch` | `npm version patch && git push && git push --follow-tags` | Increments the **patch** number — e.g. `1.0.0 → 1.0.1`. Use for small fixes or documentation updates. |
+| `npm run release:minor` | `npm version minor && git push && git push --follow-tags` | Increments the **minor** number — e.g. `1.0.0 → 1.1.0`. Use for new, backward-compatible features. |
+| `npm run release:major` | `npm version major && git push && git push --follow-tags` | Increments the **major** number — e.g. `1.0.0 → 2.0.0`. Use for breaking changes or major refactors. |
+| `npm run release:beta` | `npm version prerelease --preid=beta && git push && git push --follow-tags` | Creates a **pre-release** — e.g. `1.1.0-beta.1`. Use for testing preview builds. |
+
+---
+
+### 🧭 Workflow
+
+1️⃣ **Start from a clean, up-to-date branch:**
+```bash
+git checkout main
+git pull
+```
+
+2️⃣ **Choose the right release command:**
+```bash
+npm run release:patch
+# or npm run release:minor
+# or npm run release:major
+# or npm run release:beta
+```
+
+3️⃣ The command automatically:
+- Updates the `"version"` field in `package.json`
+- Creates a new Git commit and tag (e.g. `v1.0.1`)
+- Pushes commits **and tags** to GitHub
+
+4️⃣ **Vercel auto-deploys** your new version — the footer shows `vX.Y.Z (commit)` once the build finishes.
+
+---
+
+### 🧠 Notes
+- All version tags (`v1.0.1`, etc.) appear under the **Releases** tab on GitHub.
+- You can view the current version in the footer or in `package.json`.
+- If you ever bump by mistake:
+  ```bash
+  git tag -d v1.0.1
+  git reset --hard HEAD~1
+  ```
+## 🏷️ Versioning and Releases
+
+This project follows **Semantic Versioning (SemVer)** using npm’s built-in version management commands.
+
+### 📦 Available Release Scripts
+
+| Script | Command Run | Description |
+|---------|--------------|-------------|
+| `npm run release:patch` | `npm version patch && git push && git push --follow-tags` | Increments the **patch** number — e.g. `1.0.0 → 1.0.1`. Use for small fixes or documentation updates. |
+| `npm run release:minor` | `npm version minor && git push && git push --follow-tags` | Increments the **minor** number — e.g. `1.0.0 → 1.1.0`. Use for new, backward-compatible features. |
+| `npm run release:major` | `npm version major && git push && git push --follow-tags` | Increments the **major** number — e.g. `1.0.0 → 2.0.0`. Use for breaking changes or major refactors. |
+| `npm run release:beta` | `npm version prerelease --preid=beta && git push && git push --follow-tags` | Creates a **pre-release** — e.g. `1.1.0-beta.1`. Use for testing preview builds. |
+
+---
+
+### 🧭 Workflow
+
+1️⃣ **Start from a clean, up-to-date branch:**
+```bash
+git checkout main
+git pull
+```
+
+2️⃣ **Choose the right release command:**
+```bash
+npm run release:patch
+# or npm run release:minor
+# or npm run release:major
+# or npm run release:beta
+```
+
+3️⃣ The command automatically:
+- Updates the `"version"` field in `package.json`
+- Creates a new Git commit and tag (e.g. `v1.0.1`)
+- Pushes commits **and tags** to GitHub
+
+4️⃣ **Vercel auto-deploys** your new version — the footer shows `vX.Y.Z (commit)` once the build finishes.
+
+---
+
+### 🧠 Notes
+- All version tags (`v1.0.1`, etc.) appear under the **Releases** tab on GitHub.
+- You can view the current version in the footer or in `package.json`.
+- If you ever bump by mistake:
+  ```bash
+  git tag -d v1.0.1
+  git reset --hard HEAD~1
+  ```
+
+
+
+---
+
 ## 5) Run Locally
 
 ```bash
