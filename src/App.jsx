@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import './index.css'
 import { useTheme } from './hooks/useTheme'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 function App() {
   const { theme, toggleTheme } = useTheme('dark', true)
@@ -46,31 +47,7 @@ function App() {
       </main>
 
       {/* Footer (we'll extract this next) */}
-      <footer className="border-t border-gray-200 dark:border-gray-800">
-        <div className="mx-auto max-w-4xl px-4 py-4 text-sm flex flex-col sm:flex-row items-center justify-between gap-2">
-          <p className="text-gray-600 dark:text-gray-400">
-            © {new Date().getFullYear()} Hello World Starter
-          </p>
-          <nav className="flex items-center gap-4">
-            <a
-              href="https://github.com/markdeftynecs/react-hello-world"
-              className="underline-offset-4 hover:underline text-gray-700 dark:text-gray-300"
-              target="_blank"
-              rel="noreferrer"
-            >
-              GitHub Repo
-            </a>
-            <a
-              href="/"
-              className="underline-offset-4 hover:underline text-gray-700 dark:text-gray-300"
-              onClick={e => e.preventDefault()}
-              title="Add your Vercel project URL once deployed"
-            >
-              Live Site
-            </a>
-          </nav>
-        </div>
-      </footer>
+      <Footer />
     </div>
   )
 }
