@@ -3,6 +3,7 @@ import './index.css'
 import { useTheme } from './hooks/useTheme'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import InfoCard from './components/InfoCard'
 
 function App() {
   const { theme, toggleTheme } = useTheme('dark', true)
@@ -48,15 +49,6 @@ function App() {
 
       {/* Footer (we'll extract this next) */}
       <Footer />
-    </div>
-  )
-}
-
-function InfoCard({ label, value }) {
-  return (
-    <div className="rounded-xl border border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800/60">
-      <div className="text-xs uppercase tracking-wider text-gray-500 dark:text-gray-400">{label}</div>
-      <div className="mt-1 text-base font-medium">{value}</div>
     </div>
   )
 }
