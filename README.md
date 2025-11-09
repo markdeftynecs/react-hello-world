@@ -71,16 +71,50 @@ ReactHelloWorld/
 
 ---
 
-## 3) What’s Installed
+## 3) Dependencies Installed
 
-**Runtime dependencies**
-- `react`, `react-dom`
+### ✅ Runtime Dependencies (used at runtime)
 
-**Dev/build dependencies**
-- `vite`
-- `@vitejs/plugin-react` (React plugin for Vite, Fast Refresh/JSX)
-- `tailwindcss` (utility CSS)
-- `postcss`, `autoprefixer` (Tailwind’s CSS pipeline)
+| Package | Purpose |
+|----------|----------|
+| **react** | Core React library for building UI components |
+| **react-dom** | React DOM bindings for rendering components to the browser |
+
+These packages are required for the app to run in production — Vercel installs them automatically during deployment.
+
+---
+
+### 🧰 Development Dependencies (used only during development and build)
+
+| Package | Purpose |
+|----------|----------|
+| **vite** | Fast development server and build tool |
+| **@vitejs/plugin-react** | Adds React JSX and Fast Refresh support to Vite |
+| **tailwindcss** | Utility-first CSS framework for styling |
+| **postcss** | CSS processing engine used by Tailwind |
+| **autoprefixer** | PostCSS plugin that automatically adds vendor prefixes to CSS |
+
+These are not shipped to production. They’re used during local development or build time to compile, transform, or optimize the final output in the **dist/** folder.
+
+---
+
+### ⚙️ Summary
+
+| Category | Description |
+|-----------|-------------|
+| **Runtime** | Packages required when your app executes (e.g., React libraries) |
+| **Development** | Packages required only during build and development (e.g., Vite, Tailwind) |
+
+---
+
+### 💡 Analogy (for .NET developers)
+
+| Node/npm Concept | .NET Analogy |
+|------------------|--------------|
+| Runtime dependencies | Assemblies required when the app runs (e.g., `Microsoft.AspNetCore.Mvc.dll`) |
+| Dev dependencies | Build-time tools (e.g., MSBuild, analyzers, EF Core CLI) |
+
+
 
 ---
 
