@@ -1,6 +1,6 @@
 {
   "name": "react-hello-world",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "type": "module",
   "description": "Minimal React + Vite Hello World with Tailwind (ready for Vercel).",
@@ -11,7 +11,7 @@
     "release:patch": "npm version patch && git push && git push --follow-tags",
     "release:minor": "npm version minor && git push && git push --follow-tags",
     "release:major": "npm version major && git push && git push --follow-tags",
-    "release:beta":  "npm version prerelease --preid=beta && git push && git push --follow-tags"
+    "release:beta": "npm version prerelease --preid=beta && git push && git push --follow-tags"
   },
   "dependencies": {
     "react": "^18.3.1",
