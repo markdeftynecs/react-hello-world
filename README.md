@@ -46,13 +46,27 @@ ReactHelloWorld/
 ├─ index.html
 ├─ package.json
 ├─ postcss.config.cjs      # CommonJS because the project uses ESM ("type": "module")
-├─ README.md
 ├─ tailwind.config.js
 ├─ vite.config.js
+├─ README.md
 └─ src/
-   ├─ App.jsx
    ├─ index.css
-   └─ main.jsx
+   ├─ main.jsx
+   ├─ App.jsx
+   │
+   ├─ hooks/
+   │  └─ useTheme.js
+   │
+   ├─ components/
+   │  ├─ Header.jsx
+   │  ├─ Footer.jsx
+   │  └─ InfoCard.jsx
+   │
+   ├─ layouts/
+   │  └─ Layout.jsx
+   │
+   └─ pages/
+      └─ Home.jsx
 ```
 
 ---
