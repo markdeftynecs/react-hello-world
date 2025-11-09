@@ -12,6 +12,11 @@ reminder: hold `CMD+k` release then hit `v`
 
 ---
 
+[![Deployment Status](https://deploy-badge.vercel.app/?url=https://react-hello-world-drab.vercel.app&name=Hello%20World)](https://react-hello-world-drab.vercel.app)
+
+
+---
+
 ## 1) Prerequisites (macOS)
 
 - **Node.js** (v18+ recommended; you’re using v22) and *v*npm**  

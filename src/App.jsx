@@ -28,13 +28,19 @@ function App() {
 
           <div className="flex items-center gap-2">
             {/* Deploy status placeholder (swap for a real badge later) */}
-            <span
-              className="hidden sm:inline-flex items-center gap-1 rounded-full border border-gray-300 dark:border-gray-700 px-2.5 py-1 text-xs text-gray-600 dark:text-gray-300"
-              title="Placeholder — wire to Vercel status badge later"
+            <a
+              href="https://react-hello-world-drab.vercel.app"
+              target="_blank"
+              rel="noreferrer"
+              title="View live deployment"
             >
-              <span className="inline-block h-2 w-2 rounded-full bg-emerald-500" />
-              Deployed
-            </span>
+              <img
+                src="https://deploy-badge.vercel.app/?url=https://react-hello-world-drab.vercel.app&name=Hello%20World&style=flat"
+                alt="Deployment Status"
+                className="h-5"
+              />
+            </a>
+
 
             <button
               onClick={toggleTheme}
